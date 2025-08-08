@@ -1,18 +1,124 @@
+"use client";
 import React from "react";
 import { FaPhoneAlt, FaLinkedinIn, FaYoutube } from "react-icons/fa";
 import PhoneNumber from "./phoneNumber";
 import EmailLink from "./email";
 import { MdEmail, MdLocationOn } from "react-icons/md";
 import { Dosis } from "next/font/google";
+import dynamic from "next/dynamic";
+
+// Dynamically import ParticlesBg with SSR disabled
+const ParticlesBg = dynamic(
+  () =>
+    import("particles-bg").then((mod) => {
+      if (typeof window === "undefined") return () => null;
+      return mod.default;
+    }),
+  { ssr: false }
+);
 
 const dosis = Dosis({
   subsets: ["latin"],
   display: "swap",
 });
+
 const Footer = () => {
+  const particlesConfig = {
+    particles: {
+      number: {
+        value: 30,
+        density: {
+          enable: true,
+          value_area: 800,
+        },
+      },
+      color: {
+        value: "#EE3131",
+      },
+      shape: {
+        type: "circle",
+      },
+      opacity: {
+        value: 0.5,
+        random: true,
+      },
+      size: {
+        value: 3,
+        random: true,
+      },
+      line_linked: {
+        enable: true,
+        distance: 150,
+        color: "#EE3131",
+        opacity: 0.4,
+        width: 1,
+      },
+      move: {
+        enable: true,
+        speed: 2,
+        direction: "none",
+        random: true,
+        straight: false,
+        out_mode: "out",
+      },
+    },
+    interactivity: {
+      detect_on: "window",
+      events: {
+        onhover: {
+          enable: true,
+          mode: "grab",
+        },
+        onclick: {
+          enable: true,
+          mode: "push",
+        },
+        onresize: {
+          enable: true,
+          density_auto: true,
+          density_area: 400,
+        },
+        ontouchstart: {
+          enable: true,
+          mode: "grab",
+        },
+        ontouchmove: {
+          enable: true,
+          mode: "repulse",
+        },
+      },
+      modes: {
+        grab: {
+          distance: 140,
+          line_linked: {
+            opacity: 1,
+          },
+        },
+        push: {
+          particles_nb: 4,
+        },
+        repulse: {
+          distance: 100,
+          duration: 0.4,
+        },
+      },
+    },
+    retina_detect: true,
+  };
   return (
-    <>
-      <footer className="bg-[#06163A] text-white pt-24 text-sm w-full">
+    <footer className="bg-[#06163A] text-white pt-24 text-sm w-full relative min-h-[500px]">
+      {/* Particles background - positioned at bottom */}
+      <div className="absolute bottom-0 left-0 w-full h-[500px] z-0">
+        <ParticlesBg
+          type="cobweb"
+          color="#EE3131"
+          num={50}
+          // config={particlesConfig}
+        />
+      </div>
+
+      {/* Main footer content */}
+      <div className="relative z-10">
         <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-3 pb-4 gap-10">
           {/* Products */}
           <div>
@@ -130,7 +236,7 @@ const Footer = () => {
                 <EmailLink />
               </li>
               <li className="flex items-start gap-2">
-                <MdLocationOn className="text-red-600 mt-1" />
+                <MdLocationOn className="text-red-600 mt-1 text-2xl" />
                 <a
                   href="https://www.google.com/maps/dir//JD+TECH+Mahadevan+St+State+Bank+Staff+Colony,+Chromepet+Chennai,+Tamil+Nadu+600044/@12.9454196,80.1427087,16z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3a525f017cfabfa5:0xfde0ce3578cb5ac9!2m2!1d80.1427087!2d12.9454196?entry=ttu&g_ep=EgoyMDI1MDgwNi4wIKXMDSoASAFQAw%3D%3D"
                   target="_blank"
@@ -149,7 +255,7 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="bg-[#2F3967]">
+        <div className="bg-[#2F3967] relative z-10">
           <div className="border-t border-gray-700 mt-8 py-7 w-full px-4 text-center text-gray-400 flex flex-col md:flex-row items-center justify-between max-w-7xl mx-auto">
             <p>© Copyright 2023 - {new Date().getFullYear()} by JD TECH</p>
 
@@ -163,8 +269,8 @@ const Footer = () => {
             </div>
           </div>
         </div>
-      </footer>
-    </>
+      </div>
+    </footer>
   );
 };
 

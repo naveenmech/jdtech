@@ -8,7 +8,7 @@ import Footer from "../footer/footer";
 
 const NavBar = () => {
   return (
-    <div className="flex flex-col w-full overscroll-none">
+    <div className="flex flex-col w-full">
       {/* Header with logo and contact info */}
       <div className="flex">
         {/* left - logo */}
