@@ -52,7 +52,6 @@ const NavBar = () => {
 
             <div>
               <p className="font-semibold text-sm">Mail Us</p>
-              {/* <p className="lg:text-[12px] xl:text-sm">arun.v@jdtech.co.in</p> */}
               <EmailLink />
             </div>
           </div>

@@ -26,7 +26,7 @@ export default function WhatsAppLink() {
   return (
     <div onClick={handleClick} className="flex w-full cursor-pointer">
       <Image
-        className="lg:ml-10 xl:ml-5"
+        className="ml-10 lg:ml-10 xl:ml-5"
         src="/images/whatsapp.png"
         alt="call-image"
         width={50}
