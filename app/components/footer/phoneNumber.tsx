@@ -21,14 +21,14 @@ export default function PhoneNumber() {
   return isMobile ? (
     <a
       href={`tel:${phoneNumber}`}
-      className="lg:text-[12px] xl:text-sm hover:text-blue-500 hover:underline"
+      className="text-[17px] cursor-pointer hover:text-[#EE3131] hover:underline"
     >
       {phoneNumber}
     </a>
   ) : (
     <p
       onClick={handleClick}
-      className="cursor-pointer lg:text-[12px] xl:text-sm hover:text-blue-500 hover:underline"
+      className="cursor-pointer text-[17px] hover:text-[#EE3131] hover:underline"
     >
       {phoneNumber}
     </p>

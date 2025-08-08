@@ -48,7 +48,145 @@ export function NavContent() {
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-8">
-      {activeTab === "Home" && <div>Home Content</div>}
+      {activeTab === "Home" && (
+        <div>
+          Home Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content Home Content Home Content Home Content Home
+          Content Home Content
+        </div>
+      )}
       {activeTab === "About" && <div>About Us Content</div>}
       {activeTab === "ProductIT" && <div>IT Products Content</div>}
       {activeTab === "ProductOT" && <div>OT Products Content</div>}
@@ -142,7 +280,7 @@ export default function NavItems() {
   };
 
   return (
-    <nav className="">
+    <nav className="overscroll-none">
       <div className="max-w-7xl mx-auto lg:ml-[8rem] xl:ml-[14rem]">
         <div className="flex justify-between h-16">
           <div className="flex space-x-8 items-center" ref={menuRef}>
