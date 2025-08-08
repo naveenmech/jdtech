@@ -13,10 +13,29 @@ type TabContent =
   | "Contact";
 
 export default function NavItems() {
+  // Initialize with 'Home' - will be updated in useEffect on client side
   const [activeTab, setActiveTab] = useState<TabContent>("Home");
+  const [hasMounted, setHasMounted] = useState(false);
+
   const [openMenu, setOpenMenu] = useState<string | null>(null);
   const [clickedMenu, setClickedMenu] = useState<string | null>(null);
   const menuRef = useRef<HTMLDivElement>(null);
+
+  // This useEffect runs only on client side after mount
+  useEffect(() => {
+    setHasMounted(true);
+    const savedTab = localStorage.getItem("activeTab");
+    if (savedTab) {
+      setActiveTab(savedTab as TabContent);
+    }
+  }, []);
+
+  // Save to localStorage whenever activeTab changes
+  useEffect(() => {
+    if (hasMounted) {
+      localStorage.setItem("activeTab", activeTab);
+    }
+  }, [activeTab, hasMounted]);
 
   const navItems = [
     { name: "Home", tab: "Home" },
@@ -40,6 +59,7 @@ export default function NavItems() {
     { name: "Contact", tab: "Contact" },
   ];
 
+  // Rest of your existing code remains the same...
   // Close dropdown when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -56,6 +76,7 @@ export default function NavItems() {
   }, []);
 
   const isTabActive = (tabName: string) => {
+    if (!hasMounted) return false; // Don't highlight during SSR
     if (tabName === "Home") return activeTab === "Home";
     if (tabName === "About Us") return activeTab === "About";
     if (tabName === "Contact") return activeTab === "Contact";
@@ -107,6 +128,7 @@ export default function NavItems() {
                         group-hover:after:w-full
                         ${openMenu === item.name ? "after:w-full" : ""}
                         ${
+                          hasMounted &&
                           item.children.some((child) => isTabActive(child.name))
                             ? "after:w-full"
                             : ""
@@ -191,16 +213,18 @@ export default function NavItems() {
         </div>
       </nav>
 
-      {/* Content Area */}
-      <div className="p-4">
-        {activeTab === "Home" && <div>Home Content</div>}
-        {activeTab === "About" && <div>About Us Content</div>}
-        {activeTab === "ProductIT" && <div>IT Products Content</div>}
-        {activeTab === "ProductOT" && <div>OT Products Content</div>}
-        {activeTab === "SolutionIT" && <div>IT Solution Content</div>}
-        {activeTab === "SolutionOT" && <div>OT Solution Content</div>}
-        {activeTab === "Contact" && <div>Contact Content</div>}
-      </div>
+      {/* Content Area - Only render after mounting to avoid hydration mismatch */}
+      {hasMounted && (
+        <div className="p-4">
+          {activeTab === "Home" && <div>Home Content</div>}
+          {activeTab === "About" && <div>About Us Content</div>}
+          {activeTab === "ProductIT" && <div>IT Products Content</div>}
+          {activeTab === "ProductOT" && <div>OT Products Content</div>}
+          {activeTab === "SolutionIT" && <div>IT Solution Content</div>}
+          {activeTab === "SolutionOT" && <div>OT Solution Content</div>}
+          {activeTab === "Contact" && <div>Contact Content</div>}
+        </div>
+      )}
     </>
   );
 }
