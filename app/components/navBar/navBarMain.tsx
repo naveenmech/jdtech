@@ -4,9 +4,9 @@ import { NavContent } from "./navItems";
 import PhoneNumber from "./phoneNumber";
 import EmailLink from "./email";
 import WhatsAppLink from "./whatsApp";
-import Footer from "../footer/footer";
+import Footer from "../footer/footerMain";
 
-const NavBar = () => {
+const NavBarMain = () => {
   return (
     <div className="flex flex-col w-full">
       {/* Header with logo and contact info */}
@@ -91,4 +91,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+export default NavBarMain;

@@ -22,7 +22,7 @@ const dosis = Dosis({
   display: "swap",
 });
 
-const Footer = () => {
+const FooterMain = () => {
   const particlesConfig = {
     particles: {
       number: {
@@ -108,11 +108,11 @@ const Footer = () => {
   return (
     <footer className="bg-[#06163A] text-white pt-24 text-sm w-full relative min-h-[500px]">
       {/* Particles background - positioned at bottom */}
-      <div className="absolute bottom-0 left-0 w-full h-[500px] z-0">
+      <div className="absolute bottom-0 left-0 w-full h-[1100px] md:h-[600px] lg:h-[550px] z-0">
         <ParticlesBg
           type="cobweb"
           color="#EE3131"
-          num={50}
+          num={60}
           // config={particlesConfig}
         />
       </div>
@@ -274,4 +274,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default FooterMain;

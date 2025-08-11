@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { BsFillCaretDownFill } from "react-icons/bs";
+import Home from "../home/homeMain";
 
 type TabContent =
   | "Home"
@@ -47,146 +48,8 @@ export function NavContent() {
   if (!hasMounted) return null;
 
   return (
-    <div className="max-w-7xl mx-auto px-4 py-8">
-      {activeTab === "Home" && (
-        <div>
-          Home Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content Home Content Home Content Home Content Home
-          Content Home Content
-        </div>
-      )}
+    <div className="">
+      {activeTab === "Home" && <Home />}
       {activeTab === "About" && <div>About Us Content</div>}
       {activeTab === "ProductIT" && <div>IT Products Content</div>}
       {activeTab === "ProductOT" && <div>OT Products Content</div>}
