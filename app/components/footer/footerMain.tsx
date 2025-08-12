@@ -4,7 +4,7 @@ import { FaPhoneAlt, FaLinkedinIn, FaYoutube } from "react-icons/fa";
 import PhoneNumber from "./phoneNumber";
 import EmailLink from "./email";
 import { MdEmail, MdLocationOn } from "react-icons/md";
-import { Dosis } from "next/font/google";
+import { dosis } from "../commonComponent/fontDosis";
 import dynamic from "next/dynamic";
 
 // Dynamically import ParticlesBg with SSR disabled
@@ -16,11 +16,6 @@ const ParticlesBg = dynamic(
     }),
   { ssr: false }
 );
-
-const dosis = Dosis({
-  subsets: ["latin"],
-  display: "swap",
-});
 
 const FooterMain = () => {
   const particlesConfig = {
