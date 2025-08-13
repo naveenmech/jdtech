@@ -2,6 +2,7 @@
 import FeatureCards from "./FeatureCards";
 import SlideImage from "../commonComponent/slideImage";
 import { WelcomeToJDTech } from "./welcomeToJDTech";
+import OurProducts from "./ourProducts";
 
 const images = [
   { src: "/images/Home_1.jpg", alt: "Home 1" },
@@ -31,6 +32,7 @@ export default function HomeMain() {
       {/* Welcome Message */}
       <WelcomeToJDTech />
       <FeatureCards />
+      <OurProducts />
     </>
   );
 }
