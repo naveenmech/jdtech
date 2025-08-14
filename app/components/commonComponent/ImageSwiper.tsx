@@ -28,10 +28,21 @@ const ImageSwiper = ({ images }: ImageSwiperProps) => {
         loop={true}
         spaceBetween={24}
         breakpoints={{
-          0: { slidesPerView: 1.2, centeredSlides: true },
-          640: { slidesPerView: 2.3 },
-          768: { slidesPerView: 3 },
-          1024: { slidesPerView: 4 },
+          0: {
+            slidesPerView: 1,
+            centeredSlides: true,
+          },
+          640: {
+            slidesPerView: 2,
+            centeredSlides: false,
+          },
+          1024: {
+            slidesPerView: 4,
+            centeredSlides: false,
+          },
+        }}
+        onResize={(swiper) => {
+          swiper.update(); // Force Swiper to recalc after screen size change
         }}
         className="!py-6"
       >
