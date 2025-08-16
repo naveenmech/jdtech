@@ -107,7 +107,7 @@ const FooterMain = () => {
         <ParticlesBg
           type="cobweb"
           color="#EE3131"
-          num={60}
+          num={50}
           // config={particlesConfig}
         />
       </div>

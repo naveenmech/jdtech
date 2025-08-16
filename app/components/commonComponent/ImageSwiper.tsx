@@ -53,13 +53,13 @@ const ImageSwiper = ({ images }: ImageSwiperProps) => {
               <div className="absolute inset-0 -translate-x-full group-hover:translate-x-0 bg-gradient-to-r from-red-50 to-red-100 transition-transform duration-300 ease-out pointer-events-none" />
 
               {/* Smaller image perfectly centered inside card */}
-              <div className="relative flex items-center justify-center h-[120px] w-full">
+              <div className="relative flex items-center justify-center h-[150px] w-full">
                 <Image
                   src={img.src}
                   alt={img.alt}
                   width={100}
                   height={100}
-                  className="object-contain h-[100px] w-auto"
+                  className="object-contain h-[120px] w-auto py-3"
                   priority={index < 4}
                 />
               </div>

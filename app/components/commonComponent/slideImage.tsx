@@ -16,17 +16,24 @@ const SlideImage = ({ images }: SlideImageProps) => {
   }, [images.length]);
 
   return (
-    <div className="">
-      {/* Show only the current image */}
-      <Image
-        key={current}
-        src={images[current].src}
-        alt={images[current].alt}
-        width={2000}
-        height={2000}
-        priority
-        className="w-[300rem] h-[25rem] transition-opacity duration-500"
-      />
+    <div className="relative w-full overflow-hidden h-[25rem]">
+      {/* Slide wrapper with translate animation */}
+      <div
+        className="flex transition-transform duration-700 ease-in-out"
+        style={{ transform: `translateX(-${current * 100}%)` }}
+      >
+        {images.map((img, i) => (
+          <div key={i} className="w-full flex-shrink-0 relative h-[25rem]">
+            <Image
+              src={img.src}
+              alt={img.alt}
+              layout="fill"
+              objectFit="cover"
+              priority={i === current}
+            />
+          </div>
+        ))}
+      </div>
 
       {/* Bottom Navigation */}
       <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-2 z-10">
